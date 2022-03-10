@@ -1,0 +1,15 @@
+package classe;
+
+public class DataTeste {
+
+	public static void main(String[] args) {
+		
+		Data d1 = new Data();
+		d1.dia = 20;
+		d1.mes = 01;
+		d1.ano = 1987;
+		
+		System.out.print(d1.dataFormatada());
+		
+	}
+}

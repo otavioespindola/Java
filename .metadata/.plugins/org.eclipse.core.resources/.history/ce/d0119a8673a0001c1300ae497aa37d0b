@@ -1,0 +1,21 @@
+package classe;
+
+public class Jantar {
+
+	static void Comer(Pessoa p ,Comida c) {
+		p.peso += c.peso;		
+	}
+
+	public static void main(String[] args) {
+		Pessoa joao = new Pessoa("Joao", 86);
+		Comida entrada = new Comida("sopa", 0.200);
+		Comida prato = new Comida("Macarrao", 0.500);
+		
+		System.out.println(joao.peso);
+		
+		Comer(joao, entrada);
+		
+		System.out.println(joao.peso);
+		
+	}
+}
