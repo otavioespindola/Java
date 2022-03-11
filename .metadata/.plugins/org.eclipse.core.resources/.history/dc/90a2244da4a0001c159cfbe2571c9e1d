@@ -1,0 +1,25 @@
+package collections;
+
+import java.util.HashSet;
+
+public class ConjuntoBaguncado {
+	
+	public static void main(String[] args) {
+		HashSet conjunto = new HashSet();
+		
+		//Hash converte os tipos primitivos em seus wrappers
+		conjunto.add(1.2);
+		conjunto.add(true);
+		conjunto.add("Teste");
+		conjunto.add(1);
+		conjunto.add('x');	
+		
+		System.out.println(conjunto.size());
+	
+		conjunto.add("Teste");
+		System.out.println(conjunto.size());
+		
+		System.out.println(conjunto.remove("teste"));
+		System.out.println(conjunto.remove("Teste"));
+	}
+}

@@ -1,0 +1,8 @@
+package oo_composicao;
+
+public class Item {
+
+	String nome;
+	int quantidade;
+	double preco;
+}
