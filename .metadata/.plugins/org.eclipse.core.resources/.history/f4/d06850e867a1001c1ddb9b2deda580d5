@@ -1,0 +1,10 @@
+package oo.composicao.desafio;
+
+import java.util.List;
+
+public class Item {
+
+	int quantidade;
+	Produto produto = new Produto(String nome, double preco);
+	
+}

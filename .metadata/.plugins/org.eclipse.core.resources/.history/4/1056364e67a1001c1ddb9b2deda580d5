@@ -1,0 +1,14 @@
+package oo.composicao.desafio;
+
+public class CompraTeste {
+
+	public static void main(String[] args) {
+		
+		Produto prod1 = new Produto("Xampu", 8.75);
+		
+		System.out.println(prod1.nome);
+		
+		Item carrinho = new Item();
+		carrinho.produtos.add(prod1);
+	}
+}

@@ -1,0 +1,11 @@
+package oo.composicao.desafio;
+
+public class CompraTeste {
+
+	public static void main(String[] args) {
+		
+		Produto xampu = new Produto("Xampu", 8.75);
+		
+		System.out.println(xampu.nome);
+	}
+}
