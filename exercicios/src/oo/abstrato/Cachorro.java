@@ -13,5 +13,12 @@ public class Cachorro extends Mamifero {
 		
 		return "Usando as patas";
 	}
+	
+	public String respirar() {
+		return "usando O2";
+	};
+	
+	
+	
 
 }
