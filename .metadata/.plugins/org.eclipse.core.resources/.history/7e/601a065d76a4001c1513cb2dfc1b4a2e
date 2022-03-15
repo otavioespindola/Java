@@ -1,0 +1,16 @@
+package lambdas;
+
+import java.util.function.Function;
+
+public class Desafio {
+
+	public static void main(String[] args) {
+		Produto p = new Produto("Ipad", 2235.890, 0.13);
+		
+		
+		Function<Produto, Double> precoReal =
+				prod -> prod.preco * (1-prod.desconto);
+		
+		System.out.println(precoReal.apply(p));
+	}
+}

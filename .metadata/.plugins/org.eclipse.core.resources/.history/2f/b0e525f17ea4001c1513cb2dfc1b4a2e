@@ -1,0 +1,30 @@
+package lambdas;
+
+import java.text.DecimalFormat;
+import java.util.function.Function;
+import java.util.function.UnaryOperator;
+
+public class Desafio {
+
+	public static void main(String[] args) {
+		Produto p = new Produto("Ipad", 3235.89, 0.13);
+		
+		
+		Function<Produto, Double> precoReal =
+				prod -> prod.preco * (1-prod.desconto);
+
+		UnaryOperator<Double> imposto = 
+				preco -> preco >= 2500 ? preco *=1.085 
+									   : preco;
+		
+		UnaryOperator<Double> frete = 
+				valorFinal -> valorFinal >= 3000.00 ? (valorFinal += 100)
+													: (valorFinal += 50);
+		Function<Double, String> valorFomatado =
+				valor -> "R$%.2f", valor;
+				
+				
+				
+		System.out.println(precoReal.andThen(imposto).andThen(frete).apply(p));
+	}
+}
